@@ -16,7 +16,7 @@ function App() {
     <div>
       <BrowserRouter>
       <Navbar />
-      <div className='flex gap-4'>
+      <div className='flex'>
         <div className="">
           <SideBar />
         </div>

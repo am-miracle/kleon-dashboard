@@ -13,6 +13,7 @@ module.exports = {
         'black': '#202020',
         'grey2': '#C2C2C2',
         'grey3': '#F5F5F5',
+        'main': '#F9F9F9',
       },
       fontFamily: {
         'cairo': ['Cairo', 'san-serif'],
@@ -22,6 +23,7 @@ module.exports = {
         'shadow1': '0px 4px 4px rgba(0, 0, 0, 0.04);',
         'shadow2': '0px 4px 8px rgba(0, 0, 0, 0.12);',
         'shadow3': '0px 1px 28px rgba(0, 0, 0, 0.12);',
+        'shadow4': '#18px 4px 35px rgba(0, 0, 0, 0.02)'
       }
     },
   },
