@@ -43,11 +43,11 @@ function SideBar() {
             <div className='px-6'>
                 <div className='w-full my-10 p-4 rounded-xl color-l'>
                   <img className='h-8 w-8' alt='block' src={vector} />
-                <h3 className='font-cairo leading-6 text-white font-bold'>
+                <h3 className='font-cairo leading-6 text-white font-bold my-2'>
                   <p>Increase your</p>
                   <p>work with kanban</p>
                 </h3>
-                  <img className='h-8 w-8' alt='block' src={arrow} />
+                  <img className='h-8 w-8 hover:mx-6' alt='block' src={arrow} />
                 </div>
                 </div>
             </nav>
