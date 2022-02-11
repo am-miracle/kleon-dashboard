@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Settings, Dashboard, Login, Email, Kanban, Contact, Calendar, Invoices, Navbar } from './components/index';
+import { Settings, Dashboard, Login, Email, Kanban, Contact, Calendar, Invoices, Navbar, Comment, SideBar } from './components/index';
 import useToken from './components/useToken';
 
 
@@ -16,8 +16,13 @@ function App() {
     <div>
       <BrowserRouter>
       <Navbar />
+      <div className='flex gap-4'>
+        <div className="">
+          <SideBar />
+        </div>
         <Routes>
           <Route path="/" element={<Dashboard />} />
+          <Route path="/chat" element={<Comment />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/email" element={<Email />} />
           <Route path="/kanban" element={<Kanban />} />
@@ -25,6 +30,7 @@ function App() {
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/invoice" element={<Invoices />} />
         </Routes>
+      </div>
       </BrowserRouter>
     </div>
   );

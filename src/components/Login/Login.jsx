@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
 
 
 async function loginUser(credentials) {
@@ -69,8 +67,10 @@ const Login = ({setToken}) => {
                             type={password} 
                             onChange={e =>setPassword(e.target.value)}
                             className='bg-grey3 w-full shadow-sm mb-4 border-primary mt-1 block px-3 py-1 text-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:rounded-md'
-                        />
-                        <FontAwesomeIcon onClick={togglePassword} icon={eye ? faEyeSlash : faEye} className='absolute top-2 right-2 cursor-pointer' />
+                        />                        
+                        <div onClick={togglePassword}>
+                            {eye? <AiFillEye className='absolute top-2 right-2 cursor-pointer' /> : <AiFillEyeInvisible className='absolute top-2 right-2 cursor-pointer' />}
+                        </div>
                     </div>
                 </label>
                 <div>
@@ -82,7 +82,7 @@ const Login = ({setToken}) => {
                 </div>
             </form>
             <div className='mt-4'>
-                <button href='/' className='bg-accent2 hover:bg-pink-500 w-full px-1 py-2 text-center uppercase text-white rounded-md shadow-lg font-bold text-xs'>Create an account</button>
+                <button className='bg-accent2 hover:bg-pink-500 w-full px-1 py-2 text-center uppercase text-white rounded-md shadow-lg font-bold text-xs'>Create an account</button>
             </div>
         </div>
       </div>

@@ -14,21 +14,21 @@ import gift from './assets/gift.svg';
 
 
 const navigations = [
-    {id: 'dashboard', title: 'Dashboard', icon: dashboard , navLinks: '/dashboard' },
-    {id: 'email', title: 'Email', icon: email , navLinks: '/email' },
-    {id: 'chat', title: 'Chat', icon: comment , navLinks: '/chat' },
-    {id: 'kanban', title: 'Kanban', icon: thumbnail , navLinks: '/kanban' },
-    {id: 'contact', title: 'Contact', icon: contact , navLinks: '/contact' },
-    {id: 'calendar', title: 'Calendar', icon: calendar , navLinks: '/calendar' },
-    {id: 'invoices', title: 'Invoices', icon: invoice , navLinks: '/invoices' },
-    {id: 'settings', title: 'Settings', icon: setting , navLinks: '/settings' },
+    {id: 'dashboard', title: 'Dashboard', icon: dashboard , navLinks: '/dashboard', cName: 'nav-text'},
+    {id: 'email', title: 'Email', icon: email , navLinks: '/email', cName: 'nav-text' },
+    {id: 'chat', title: 'Chat', icon: comment , navLinks: '/chat', cName: 'nav-text' },
+    {id: 'kanban', title: 'Kanban', icon: thumbnail , navLinks: '/kanban', cName: 'nav-text' },
+    {id: 'contact', title: 'Contact', icon: contact , navLinks: '/contact', cName: 'nav-text' },
+    {id: 'calendar', title: 'Calendar', icon: calendar , navLinks: '/calendar', cName: 'nav-text' },
+    {id: 'invoices', title: 'Invoices', icon: invoice , navLinks: '/invoices', cName: 'nav-text' },
+    {id: 'settings', title: 'Settings', icon: setting , navLinks: '/settings', cName: 'nav-text' },
 ]
 
 const navs =[
-    { icon: notification },
-    { icon:  gift},
-    { icon: check },
-    { icon: folder },
+    { name: 'notification', href: '#', current: true, icon: notification },
+    { name: 'gift', href: '#', current: false, icon:  gift },
+    { name: 'check', href: '#', current: false, icon: check },
+    { name: 'folder', href: '#', current: false, icon: folder },
 ]
 
 

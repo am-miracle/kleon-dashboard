@@ -7,3 +7,5 @@ export {default as Email} from './Email/Email';
 export {default as Invoices} from './Invoices/Invoices';
 export {default as Settings} from './Settings/Settings';
 export {default as Kanban} from './Kanban/Kanban';
+export {default as Comment} from './Comment/Comment';
+export {default as SideBar} from './SideBar/SideBar';
