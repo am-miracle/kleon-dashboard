@@ -21,19 +21,19 @@ function SideBar() {
       <IconContext.Provider value={{ color: '#fff' }}>
          <div className='h-full w-40 lg:w-56 bg-white text-grey2 shadow4'>
             <nav className= 'nav-menu flex-col flex'>
-            <h3 className='px-8 text-base text-grey2 uppercase py-3'>main menu</h3>
+            <h3 className='px-8 text-base text-grey1 uppercase py-3'>main menu</h3>
             <ul className='nav-menu-items h-auto p-0'>
                 {navigations.map((item) => {
                 return (
                     <li key={item.id}
                       className={classNames(
-                        item.current ? 'text-white' : 'text-gray-300 hover:bg-primary hover:text-white',
+                        item.current ? 'text-white' : 'text-grey1 hover:bg-primary hover:text-white',
                         'px-3 py-2 text-sm font-medium list-none font-cairo'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
                         <Link to={item.navLinks} className="flex flex-row justify-center w-full items-center">
-                            <img src={item.icon} alt={item.title} className='flex-[30%] w-7 h-7 grid place-items-center' />
+                            <img src={item.icon} alt={item.title} className='flex-[30%] w-6 h-6 grid place-items-center' />
                             <span className="flex-[70%] text-base">{item.title}</span>
                         </Link>
                     </li>

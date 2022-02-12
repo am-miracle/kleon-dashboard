@@ -11,6 +11,7 @@ module.exports = {
         'accent2Soft': '#FFCFF2',
         'white': '#FFFFFF',
         'black': '#202020',
+        'grey1': '#A5A5A5',
         'grey2': '#C2C2C2',
         'grey3': '#F5F5F5',
         'main': '#F9F9F9',
