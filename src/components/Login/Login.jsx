@@ -16,7 +16,8 @@ async function loginUser(credentials) {
 
 const Login = ({setToken}) => {
     const [username, setUserName] = useState();
-    const [password, setPassword] = useState('password');
+    const [password, setPassword] = useState('');
+    const [type , setType] = useState('password')
     const[eye,setEye]=useState(true);
 
     const handleSubmit = async e => {
@@ -30,12 +31,14 @@ const Login = ({setToken}) => {
 
     const togglePassword = () => {
 
-        if(password === "password"){
+        if(type && password === "password"){
             setPassword("text");
+            setType("text");
             setEye(false);
         }
         else{
             setPassword("password");
+            setType('password')
             setEye(true);
         }
     };
@@ -64,7 +67,7 @@ const Login = ({setToken}) => {
                     <div className='relative'>
                         <input 
                             required
-                            type={password} 
+                            type={type}
                             onChange={e =>setPassword(e.target.value)}
                             className='bg-grey3 w-full shadow-sm mb-4 border-primary mt-1 block px-3 py-1 text-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:rounded-md'
                         />                        

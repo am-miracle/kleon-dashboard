@@ -31,9 +31,18 @@ const navs =[
     { name: 'folder', href: '#', current: false, icon: folder },
 ]
 
+const contacts = [
+    { name: 'Angela Moss', title: 'Marketing Manager'},
+    { name: 'Andy Law', title: 'Graphic Designer'},
+    { name: 'Benny Kenn', title: 'Software Engineer'},
+    { name: 'Chynthia Lawra', title: 'CEO'},
+    { name: 'Della Samantha', title: 'Head Manager'},
+    { name: 'Evans John', title: 'Programmer'},
+
+]
 
 
-export { navigations, navs };
+export { navigations, navs, contacts };
 
 
 
