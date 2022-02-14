@@ -10,7 +10,10 @@ import notification from './assets/notification.svg';
 import setting from './assets/setting.svg';
 import thumbnail from './assets/thumbnail.svg';
 import gift from './assets/gift.svg';
-
+import { AiFillStar, AiFillClockCircle } from 'react-icons/ai';
+import { BsFillInboxFill } from 'react-icons/bs';
+import { ImAttachment } from 'react-icons/im';
+import { MdEmail } from 'react-icons/md';
 
 
 const navigations = [
@@ -32,17 +35,22 @@ const navs =[
 ]
 
 const contacts = [
-    { name: 'Angela Moss', title: 'Marketing Manager'},
-    { name: 'Andy Law', title: 'Graphic Designer'},
-    { name: 'Benny Kenn', title: 'Software Engineer'},
-    { name: 'Chynthia Lawra', title: 'CEO'},
-    { name: 'Della Samantha', title: 'Head Manager'},
-    { name: 'Evans John', title: 'Programmer'},
+    { name: 'Angela Moss', title: 'Marketing Manager', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+    { name: 'Andy Law', title: 'Graphic Designer', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+    { name: 'Benny Kenn', title: 'Software Engineer', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+    { name: 'Chynthia Lawra', title: 'CEO', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+    { name: 'Della Samantha', title: 'Head Manager', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+    { name: 'Evans John', title: 'Programmer', email: <MdEmail className='text-grey2 hover:text-primary w-4 h-4 float-right' />},
+]
 
+const emails = [
+    {mail: 'kevinhard@mail.com', date: '24 min ago', title: 'How to manage your working time in this pandemic', subtitle1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' , subtitle2: 'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ...', starIcon: <AiFillStar className='bg-yellow2 rounded-md flex justify-center items-center text-yellow1 w-4 h-4' />, clock:<AiFillClockCircle className='text-grey2 w-4 h-4' />, attach: <ImAttachment className='text-blue-400 w-4 h-4' />, inbox: <BsFillInboxFill className='text-primary w-4 h-4'/>  },
+    {mail: 'joannahsitepu@mail.com', date: 'Yesterday, at 11:24 AM', title: 'Dont forget to save your work after 10 min', subtitle1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' , subtitle2: 'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ...', starIcon: <AiFillStar className='text-grey1 w-4 h-4 rounded-md' />, clock:<AiFillClockCircle className='text-grey2 w-4 h-4' />,  inbox: <BsFillInboxFill className='text-grey2 w-4 h-4'/>  },
+    {mail: 'machelgreen@mail.com', date: 'October 25th, 2020  08:55 AM', title: 'Important Document from Goverment', subtitle1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' , subtitle2: 'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ...', starIcon: <AiFillStar className='text-grey1 w-4 h-4 rounded-md' />, clock:<AiFillClockCircle className='text-grey2 w-4 h-4' />, attach: <ImAttachment className='text-blue-400 w-4 h-4' />, inbox: <BsFillInboxFill className='text-grey2 w-4 h-4'/>  },
 ]
 
 
-export { navigations, navs, contacts };
+export { navigations, navs, contacts, emails };
 
 
 

@@ -1,16 +1,16 @@
 import React from 'react';
-import {AiFillCaretDown, AiOutlineSearch, AiFillStar} from 'react-icons/ai';
+import {AiFillCaretDown, AiOutlineSearch} from 'react-icons/ai';
 import {MdMarkEmailUnread} from 'react-icons/md';
 import {ImUsers} from 'react-icons/im';
 import {HiDotsCircleHorizontal} from 'react-icons/hi';
-import {BsCalendarFill, BsPlusSquare, BsSave2Fill} from 'react-icons/bs';
+import {BsCalendarFill, BsPlusSquare, BsSave2Fill, } from 'react-icons/bs';
 import barCharts from '../../assets/barCharts.svg'
 import icon from '../../assets/icon.png'
 import ringProgress2 from '../../assets/ringProgress2.svg'
 import graph from '../../assets/graph.svg'
 import ringProgress from '../../assets/ringProgress.svg';
 import bgBox from '../../assets/bgBox.svg';
-import { contacts } from '../../containers';
+import { contacts, emails } from '../../containers';
 
 
 const Dashboard = () => {
@@ -112,8 +112,8 @@ const Dashboard = () => {
         </div>
       </div>
       <div className=''>
-        <div className='flex columns-3xs'>
-          <div className='shadow-md bg-white aspect-auto px-4 py-6 w-3/12'>
+        <div className='flex gap-4 mt-8'>
+          <div className='shadow-md bg-white px-4 py-6 w-72'>
             <div className='flex justify-between items-center'>
               <div>
                 <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Contacts</h3>
@@ -123,24 +123,27 @@ const Dashboard = () => {
             </div>
             <div className='mt-2'>
               {contacts.map((contact, index)=>(
-                <div className='flex items-center gap-4 py-3' key={index}>
-                  <div className='bg-grey2 w-8 h-8 rounded-md'></div>
-                  <div className=''>
-                    <p className='text-black text-sm font-cairo'>{contact.name}</p>
-                    <p className='text-grey1 text-xs font-open'>{contact.title}</p>
+                <div className='flex justify-between items-center' key={index}>
+                  <div className='flex items-center gap-2 py-3'>
+                    <div className='bg-grey2 w-8 h-8 rounded-md'></div>
+                    <div>
+                      <p className='text-black text-sm font-cairo'>{contact.name}</p>
+                      <p className='text-grey1 text-xs font-open'>{contact.title}</p>
+                    </div>
                   </div>
+                  {contact.email}
                 </div>
               ))}
               <button className='bg-grey3 text-primary w-full font-bold py-2 shadow-sm rounded-sm'>View More</button>
             </div>
           </div>
-          <div className='shadow-md bg-white aspect-auto px-4 py-6 h-1/2 flex-auto'>
+          <div className='shadow-md bg-white px-4 py-6 w-full h-full'>
               <div className='flex justify-between items-center'>
                 <div className=''>
                   <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Recent Emails</h3>
                   <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet</p>
                 </div>
-                <div className='flex justify-between items-center gap-2'>
+                <div className='flex justify-between items-center gap-8 border-b border-grey2 pb-3'>
                   <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
                     <MdMarkEmailUnread className='w-4 h-4' />Important
                   </p>
@@ -152,12 +155,73 @@ const Dashboard = () => {
                   </p>
                 </div>
               </div>
+              <div className='mt-8'>
+                {emails.map((email, index)=>(
+                  <div key={index} className='flex justify-between items-center'>
+                    <div className='pb-3 flex items-start justify-center gap-2'>
+                      {email.starIcon}
+                      <div className='bg-grey2 w-8 h-8 rounded-md'></div>
+                      <div className=''>
+                        <p className='text-xs text-grey1 font-cairo'>{email.mail} . {email.date}</p>
+                        <h2 className='text-sm font-semibold font-cairo pt-2 pb-3'>{email.title}</h2>
+                        <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
+                        <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
+                      </div>
+                    </div>
+                    <div className='flex items gap-4'>
+                        {email.inbox}
+                        {email.clock}
+                        {email.attach}
+                      </div>
+                  </div>
+                ))}
+              </div>
           </div>
         </div>
-        <div className='columns-3xs mt-8'>
-          <div className='w-full shadow-md bg-white aspect-auto'>1</div>
-          <div className='w-full shadow-md bg-white aspect-auto'>2</div>
-          <div className='w-full shadow-md bg-white aspect-auto'>3</div>
+
+        <div className='flex gap-3'>
+          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-72 mt-7'>
+            <h3 className='text-base font-cairo font-bold'>Most Tag Used</h3>
+            <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
+            <div className='mt-6 font-cairo'>
+              <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
+              </div>
+              <div className='flex justify-between items-center'>
+                <p className='font-bold text-xs text-primary'>#business</p>
+                <p className='text-xs text-grey1'>452 times</p>
+              </div>
+            </div>
+            <div className='my-6 font-cairo'>
+              <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
+              </div>
+              <div className='flex justify-between items-center'>
+                <p className='font-bold text-xs text-primary'>#meeting</p>
+                <p className='text-xs text-grey1'>97 times</p>
+              </div>
+            </div>
+            <div className='font-cairo'>
+              <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
+              </div>
+              <div className='flex justify-between items-center'>
+                <p className='font-bold text-xs text-primary'>#corporate</p>
+                <p className='text-xs text-grey1'>61 times</p>
+              </div>
+            </div>
+            <div>
+              <p className='text-base text-grey1 mt-4'>Other tags</p>
+              <ul className='flex items-center flex-wrap gap-2 mt-2'>
+                <li className='text-xs px-4 py-2 text-primary bg-primarySoft rounded-md'>#teamwork</li>
+                <li className='text-xs px-4 py-2 text-primary bg-primarySoft rounded-md'>#design</li>
+                <li className='text-xs px-4 py-2 text-primary bg-primarySoft rounded-md'>#projectmanagement</li>
+                <li className='text-xs px-4 py-2 text-primary bg-primarySoft rounded-md'>#16+</li>
+              </ul>
+            </div>
+          </div>
+          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-72'></div>
+          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-4/6'></div>
         </div>
       </div>
     </div>

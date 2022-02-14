@@ -15,6 +15,8 @@ module.exports = {
         'grey2': '#C2C2C2',
         'grey3': '#F5F5F5',
         'main': '#F9F9F9',
+        'yellow1': '#FFAB2D',
+        'yellow2': '#FFEBCC'
       },
       fontFamily: {
         'cairo': ['Cairo', 'san-serif'],
