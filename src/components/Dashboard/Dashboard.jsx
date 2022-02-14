@@ -9,8 +9,9 @@ import icon from '../../assets/icon.png'
 import ringProgress2 from '../../assets/ringProgress2.svg'
 import graph from '../../assets/graph.svg'
 import ringProgress from '../../assets/ringProgress.svg';
+import ringProgress3 from '../../assets/ringProgress3.svg';
 import bgBox from '../../assets/bgBox.svg';
-import { contacts, emails } from '../../containers';
+import { contacts, emails, categories } from '../../containers';
 
 
 const Dashboard = () => {
@@ -134,7 +135,7 @@ const Dashboard = () => {
                   {contact.email}
                 </div>
               ))}
-              <button className='bg-grey3 text-primary w-full font-bold py-2 shadow-sm rounded-sm'>View More</button>
+              <button className='bg-primarySoft text-primary w-full font-bold py-2 shadow-sm rounded-sm'>View More</button>
             </div>
           </div>
           <div className='shadow-md bg-white px-4 py-6 w-full h-full'>
@@ -185,7 +186,7 @@ const Dashboard = () => {
             <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
             <div className='mt-6 font-cairo'>
               <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '65%' }}></div>
               </div>
               <div className='flex justify-between items-center'>
                 <p className='font-bold text-xs text-primary'>#business</p>
@@ -203,7 +204,7 @@ const Dashboard = () => {
             </div>
             <div className='font-cairo'>
               <div className=" bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
-                <div className="bg-primary h-2.5 rounded-full" style={{ width: '45%' }}></div>
+                <div className="bg-primary h-2.5 rounded-full" style={{ width: '65%' }}></div>
               </div>
               <div className='flex justify-between items-center'>
                 <p className='font-bold text-xs text-primary'>#corporate</p>
@@ -220,8 +221,34 @@ const Dashboard = () => {
               </ul>
             </div>
           </div>
-          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-72'></div>
-          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-4/6'></div>
+          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-72'>
+            <h3 className='text-base font-cairo font-bold'>Email Categories</h3>
+            <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
+            <div className='flex items-center justify-center'>
+              <img src={ringProgress3} alt='ring' className='mt-4 h-1/2 w-1/2' />
+            </div>
+            <p className='text-grey1 mt-4'>Legend</p>
+            {categories.map((category, index)=>(
+              <div key={index} className='flex justify-between items-center py-2 font-cairo'>
+                <div className='flex gap-2 items-center'>
+                  <div className='h-3 w-3 bg-primary rounded-md'></div>
+                  <p className='text-primary text-xs'>{category.name}</p>
+                </div>
+                <p className='text-base font-bold'>{category.number}</p>
+              </div>
+            ))}
+          </div>
+          <div className='bg-white rounded-sm shadow-shadow-1 px-4 py-6 w-4/6'>
+              <div className='flex justify-between items-center'>
+                <div>
+                  <h3 className='text-base font-cairo font-bold'>Pinned Emails</h3>
+                  <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
+                </div>
+                <button className='px-3 py-1 text-sm text-primary bg-white shadow-sm hover:shadow-md rounded-md font-bold border-primary border flex items-center justify-evenly'>
+                  <BsSave2Fill className='text-primary h-3 w-3 mr-2' />Save report
+                </button>
+              </div>
+          </div>
         </div>
       </div>
     </div>

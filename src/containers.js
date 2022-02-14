@@ -49,8 +49,16 @@ const emails = [
     {mail: 'machelgreen@mail.com', date: 'October 25th, 2020  08:55 AM', title: 'Important Document from Goverment', subtitle1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et' , subtitle2: 'dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ...', starIcon: <AiFillStar className='text-grey1 w-4 h-4 rounded-md' />, clock:<AiFillClockCircle className='text-grey2 w-4 h-4' />, attach: <ImAttachment className='text-blue-400 w-4 h-4' />, inbox: <BsFillInboxFill className='text-grey2 w-4 h-4'/>  },
 ]
 
+const categories = [
+    {name: 'Primary (27%)', number: '763'},
+    {name: 'Promotion (11%)', number: '321'},
+    {name: 'Forum (22%)', number: '69'},
+    {name: 'Socials (15%) ', number: '154'},
+    {name: 'Spam (25%) ', number: '696'},
+]
 
-export { navigations, navs, contacts, emails };
+
+export { navigations, navs, contacts, emails, categories };
 
 
 
