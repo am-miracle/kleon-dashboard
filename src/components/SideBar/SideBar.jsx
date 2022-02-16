@@ -28,13 +28,13 @@ function SideBar() {
                 return (
                     <li key={item.id}
                       className={classNames(
-                        item.current ? 'text-white fill-grey1' : 'text-grey1 fill-grey1 hover:text-primary hover:fill-primary',
-                        'px-3 py-2 text-sm font-medium list-none font-cairo'
+                        item.current ? 'text-primary fill-grey1' : 'text-grey fill-grey1 hover:text-primary hover:fill-primary',
+                        'px-3 py-2 text-sm font-medium font-cairo'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
                         <Link to={item.navLinks} className="flex flex-row justify-center w-full items-center">
-                            <div className='grid place-items-center flex-[30%]'>{item.icon}</div>
+                            {item.icon}
                             <span className="flex-[70%] text-base">{item.title}</span>
                         </Link>
                     </li>

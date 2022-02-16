@@ -17,14 +17,14 @@ import { MdEmail } from 'react-icons/md';
 
 
 const navigations = [
-    {id: 'dashboard', title: 'Dashboard', icon: <Dashboard className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/', cName: 'nav-text'},
-    {id: 'email', title: 'Email', icon: <Email className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/email', cName: 'nav-text' },
-    {id: 'chat', title: 'Chat', icon: <Comment className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/chat', cName: 'nav-text' },
-    {id: 'kanban', title: 'Kanban', icon: <Thumbnail className='w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/kanban', cName: 'nav-text' },
-    {id: 'contact', title: 'Contact', icon: <Contact className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/contact', cName: 'nav-text' },
-    {id: 'calendar', title: 'Calendar', icon: <Calendar className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/calendar', cName: 'nav-text' },
-    {id: 'invoices', title: 'Invoices', icon: <Invoice className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/invoice', cName: 'nav-text' },
-    {id: 'settings', title: 'Settings', icon: <Setting className='w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/settings', cName: 'nav-text' },
+    { current: true, id: 'dashboard', title: 'Dashboard', icon: <Dashboard className='grid place-items-center flex-[30%] w-6 h-6 fill-primary hover:fill-primary' /> , navLinks: '/'},
+    { current: false, id: 'email', title: 'Email', icon: <Email className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/email' },
+    { current: false, id: 'chat', title: 'Chat', icon: <Comment className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/chat' },
+    { current: false, id: 'kanban', title: 'Kanban', icon: <Thumbnail className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/kanban' },
+    { current: false, id: 'contact', title: 'Contact', icon: <Contact className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/contact' },
+    { current: false, id: 'calendar', title: 'Calendar', icon: <Calendar className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/calendar' },
+    { current: false, id: 'invoices', title: 'Invoices', icon: <Invoice className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/invoice' },
+    { current: false, id: 'settings', title: 'Settings', icon: <Setting className='grid place-items-center flex-[30%] w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/settings' },
 ]
 
 const navs =[
