@@ -1,15 +1,15 @@
-import calendar from './assets/calendar-silhouette.svg';
-import check from './assets/check.svg';
-import comment from './assets/comment.svg';
-import contact from './assets/contact.svg';
-import dashboard from './assets/dashboard.svg';
-import email from './assets/email.svg';
-import folder from './assets/folder.svg';
-import invoice from './assets/invoice.svg';
-import notification from './assets/notification.svg';
-import setting from './assets/setting.svg';
-import thumbnail from './assets/thumbnail.svg';
+import { ReactComponent as Calendar} from './assets/calendar-silhouette.svg';
+import { ReactComponent as Comment} from './assets/comment.svg';
+import { ReactComponent as Contact} from './assets/contact.svg';
+import { ReactComponent as Dashboard} from './assets/dashboard.svg';
+import { ReactComponent as Email} from './assets/email.svg';
+import { ReactComponent as Invoice} from './assets/invoice.svg';
+import { ReactComponent as Setting} from './assets/setting.svg';
+import { ReactComponent as Thumbnail} from './assets/thumbnail.svg';
 import gift from './assets/gift.svg';
+import check from './assets/check.svg';
+import folder from './assets/folder.svg';
+import notification from './assets/notification.svg';
 import { AiFillStar, AiFillClockCircle } from 'react-icons/ai';
 import { BsFillInboxFill } from 'react-icons/bs';
 import { ImAttachment } from 'react-icons/im';
@@ -17,14 +17,14 @@ import { MdEmail } from 'react-icons/md';
 
 
 const navigations = [
-    {id: 'dashboard', title: 'Dashboard', icon: dashboard , navLinks: '/', cName: 'nav-text'},
-    {id: 'email', title: 'Email', icon: email , navLinks: '/email', cName: 'nav-text' },
-    {id: 'chat', title: 'Chat', icon: comment , navLinks: '/chat', cName: 'nav-text' },
-    {id: 'kanban', title: 'Kanban', icon: thumbnail , navLinks: '/kanban', cName: 'nav-text' },
-    {id: 'contact', title: 'Contact', icon: contact , navLinks: '/contact', cName: 'nav-text' },
-    {id: 'calendar', title: 'Calendar', icon: calendar , navLinks: '/calendar', cName: 'nav-text' },
-    {id: 'invoices', title: 'Invoices', icon: invoice , navLinks: '/invoice', cName: 'nav-text' },
-    {id: 'settings', title: 'Settings', icon: setting , navLinks: '/settings', cName: 'nav-text' },
+    {id: 'dashboard', title: 'Dashboard', icon: <Dashboard className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/', cName: 'nav-text'},
+    {id: 'email', title: 'Email', icon: <Email className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/email', cName: 'nav-text' },
+    {id: 'chat', title: 'Chat', icon: <Comment className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/chat', cName: 'nav-text' },
+    {id: 'kanban', title: 'Kanban', icon: <Thumbnail className='w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/kanban', cName: 'nav-text' },
+    {id: 'contact', title: 'Contact', icon: <Contact className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/contact', cName: 'nav-text' },
+    {id: 'calendar', title: 'Calendar', icon: <Calendar className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/calendar', cName: 'nav-text' },
+    {id: 'invoices', title: 'Invoices', icon: <Invoice className='w-6 h-6 fill-grey1 hover:fill-primary' /> , navLinks: '/invoice', cName: 'nav-text' },
+    {id: 'settings', title: 'Settings', icon: <Setting className='w-6 h-6 fill-grey1 hover:fill-primary' />, navLinks: '/settings', cName: 'nav-text' },
 ]
 
 const navs =[
@@ -51,12 +51,11 @@ const emails = [
 
 const categories = [
     {name: 'Primary (27%)', number: '763'},
-    {name: 'Promotion (11%)', number: '321'},
+    {name: 'Promotion (11%)', number: '321', color: 'text-yellow-500'},
     {name: 'Forum (22%)', number: '69'},
     {name: 'Socials (15%) ', number: '154'},
     {name: 'Spam (25%) ', number: '696'},
 ]
-
 
 export { navigations, navs, contacts, emails, categories };
 

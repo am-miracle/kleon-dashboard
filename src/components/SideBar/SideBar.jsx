@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons';
 import arrow from '../../assets/arrow.svg'
 import vector from '../../assets/vector.svg';
 import './SideBar.css';
+import {ReactComponent as Setting} from '../../assets/setting.svg';
 
 
 function classNames(...classes) {
@@ -18,7 +19,7 @@ function SideBar() {
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <>
          <div className='h-full w-40 lg:w-56 bg-white text-grey2 shadow4'>
             <nav className= 'nav-menu flex-col flex'>
             <h3 className='px-8 text-base text-grey1 uppercase py-3'>main menu</h3>
@@ -27,13 +28,13 @@ function SideBar() {
                 return (
                     <li key={item.id}
                       className={classNames(
-                        item.current ? 'text-white' : 'text-grey1 hover:bg-primary hover:text-white',
+                        item.current ? 'text-white fill-grey1' : 'text-grey1 fill-grey1 hover:text-primary hover:fill-primary',
                         'px-3 py-2 text-sm font-medium list-none font-cairo'
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
                         <Link to={item.navLinks} className="flex flex-row justify-center w-full items-center">
-                            <img src={item.icon} alt={item.title} className='flex-[30%] w-6 h-6 grid place-items-center' />
+                            <div className='grid place-items-center flex-[30%]'>{item.icon}</div>
                             <span className="flex-[70%] text-base">{item.title}</span>
                         </Link>
                     </li>
@@ -52,7 +53,7 @@ function SideBar() {
                 </div>
             </nav>
         </div>
-     </IconContext.Provider>
+     </>
     </>
   );
 }
