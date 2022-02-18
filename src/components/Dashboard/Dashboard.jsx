@@ -11,6 +11,8 @@ import graph from '../../assets/graph.svg'
 import ringProgress from '../../assets/ringProgress.svg';
 import ringProgress3 from '../../assets/ringProgress3.svg';
 import bgBox from '../../assets/bgBox.svg';
+import file from '../../assets/file.svg';
+import blankPage from '../../assets/blank-page.svg';
 import favourite from '../../assets/favourite.svg';
 import { contacts, emails, categories } from '../../containers';
 
@@ -113,9 +115,9 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className=''>
-        <div className='flex gap-4 mt-8'>
-          <div className='shadow-sm bg-white px-4 py-6 w-72 rounded-md'>
+      <div className='flex flex-wrap gap-4 relative'>
+        {/* <div className='flex gap-4 mt-8'> */}
+          <div className='shadow-sm bg-white px-4 py-6 w-72 rounded-md basis-1/4'>
             <div className='flex justify-between items-center'>
               <div>
                 <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Contacts</h3>
@@ -139,7 +141,7 @@ const Dashboard = () => {
               <button className='bg-primarySoft text-primary w-full font-bold py-2 shadow-sm rounded-sm'>View More</button>
             </div>
           </div>
-          <div className='shadow-sm bg-white px-4 py-6 w-full h-full rounded-md'>
+          <div className='shadow-sm bg-white px-4 py-6 w-full h-full rounded-md basis-[73%]'>
               <div className='flex justify-between items-center'>
                 <div className=''>
                   <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Recent Emails</h3>
@@ -179,10 +181,10 @@ const Dashboard = () => {
                 ))}
               </div>
           </div>
-        </div>
+        {/* </div> */}
 
-        <div className='flex gap-4'>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72 mt-7'>
+        {/* <div className='flex w-full'> */}
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72 basis-1/4'>
             <h3 className='text-base font-cairo font-bold'>Most Tag Used</h3>
             <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
             <div className='mt-6 font-cairo'>
@@ -222,7 +224,7 @@ const Dashboard = () => {
               </ul>
             </div>
           </div>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72'>
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72 basis-1/4'>
             <h3 className='text-base font-cairo font-bold'>Email Categories</h3>
             <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
             <div className='flex items-center justify-center'>
@@ -232,70 +234,76 @@ const Dashboard = () => {
             {categories.map((category, index)=>(
               <div key={index} className='flex justify-between items-center mt-3 font-cairo'>
                 <div className='flex gap-2 items-center'>
-                  <div className='h-3 w-3 bg-primary rounded-md'></div>
+                  <div className={category.color}></div>
                   <p className='text-primary text-xs'>{category.name}</p>
                 </div>
                 <p className='text-base font-bold'>{category.number}</p>
               </div>
             ))}
           </div>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-4/6'>
-              <div className='flex justify-between items-center'>
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-4/6 basis-[46%]'>
+            <div className='flex justify-between items-center'>
+              <div>
+                <h3 className='text-base font-cairo font-bold'>Pinned Emails</h3>
+                <p className='text-grey1 text-xs font-open mt-2'>Lorem ipsum dolor sit amet</p>
+              </div>
+              <button className='px-3 py-1 text-sm text-primary bg-white shadow-sm hover:shadow-md rounded-md font-bold border-primary border flex items-center justify-evenly'>
+                view more <AiFillCaretRight className='text-primary h-3 w-3 ml-3' />
+              </button>
+            </div>
+            <div className='flex flex-col mt-4'>
+              <div className='flex justify-between items-start gap-3'>
+                <div className='h-7 w-7 bg-grey1 rounded-md '></div>
                 <div>
-                  <h3 className='text-base font-cairo font-bold'>Pinned Emails</h3>
-                  <p className='text-grey1 text-xs font-open mt-2'>Lorem ipsum dolor sit amet</p>
+                  <h3 className='text-base text-black'>UI Design Submition Projects File</h3>
+                  <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                 </div>
-                <button className='px-3 py-1 text-sm text-primary bg-white shadow-sm hover:shadow-md rounded-md font-bold border-primary border flex items-center justify-evenly'>
-                  view more <AiFillCaretRight className='text-primary h-3 w-3 ml-3' />
-                </button>
+                <img src={favourite} alt='icon' className='w-7 h-7' />
               </div>
-              <div className='flex flex-col mt-4'>
-                <div className='flex justify-between items-start gap-3'>
-                  <div className='h-7 w-7 bg-grey1 rounded-md '></div>
-                  <div>
-                    <h3 className='text-base text-black'>UI Design Submition Projects File</h3>
-                    <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                  </div>
-                  <img src={favourite} alt='icon' className='w-7 h-7' />
-                </div>
-                <div className='flex items-center gap-3 mt-2'>
-                  <p className='px-3 py-1 text-xs text-primary shadow-sm rounded-md bg-white'>Master_file.fig</p>
-                  <p className='px-3 py-1 text-xs text-primary shadow-sm rounded-md bg-white'>CoverPreview.jpg</p>
-                  <p className='px-3 py-1 text-xs text-primary shadow-sm rounded-md bg-primarySoft'>4 files more</p>
-                </div>
+              <div className='flex items-center gap-3 mt-2'>
+                <span className='px-3 py-1 text-primary shadow-sm rounded-md bg-white flex gap-2 items-center'>
+                  <img src={blankPage} alt='file' className='h-4 w-4' />
+                  <p className='text-xs'>Master_file.fig</p>
+                </span>
+                <span className='px-3 py-1 text-primary shadow-sm rounded-md bg-white flex gap-2 items-center'>
+                  <img src={file} alt='file' className='h-4 w-4' />
+                  <p className='text-xs'>CoverPreview.jpg</p>
+                </span>
+                <p className='px-3 py-1 text-xs text-primary shadow-sm rounded-md bg-primarySoft'>4 files more</p>
               </div>
-              <div className='flex flex-col mt-3'>
-                <div className='flex justify-between items-start gap-3'>
-                  <div className='h-7 w-7 bg-primary rounded-md '></div>
-                  <div>
-                    <h3 className='text-base text-black'>Tips & Trick For Increase Your Work Quality</h3>
-                    <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                  </div>
-                  <img src={favourite} alt='icon' className='w-7 h-7' />
+            </div>
+            <div className='flex flex-col mt-3'>
+              <div className='flex justify-between items-start gap-3'>
+                <div className='h-7 w-7 bg-accent1 rounded-md '></div>
+                <div>
+                  <h3 className='text-base text-black'>Tips & Trick For Increase Your Work Quality</h3>
+                  <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                 </div>
+                <img src={favourite} alt='icon' className='w-7 h-7' />
               </div>
-              <div className='flex flex-col mt-3'>
-                <div className='flex justify-between items-start gap-3'>
-                  <div className='h-7 w-7 bg-grey1 rounded-md'></div>
-                  <div>
-                    <h3 className='text-base text-black'>Weekly Design Inspirations by Envato</h3>
-                    <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                  </div>
-                  <img src={favourite} alt='icon' className='w-7 h-7' />
+            </div>
+            <div className='flex flex-col mt-3'>
+              <div className='flex justify-between items-start gap-3'>
+                <div className='h-7 w-7 bg-accent2 rounded-md'></div>
+                <div>
+                  <h3 className='text-base text-black'>Weekly Design Inspirations by Envato</h3>
+                  <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                 </div>
+                <img src={favourite} alt='icon' className='w-7 h-7' />
               </div>
-              <div className='flex flex-col mt-3'>
-                <div className='flex justify-between items-start gap-3'>
-                  <div className='h-7 w-7 bg-grey1 rounded-md'></div>
-                  <div>
-                    <h3 className='text-base text-black'>Weekly Design Inspirations by Envato</h3>
-                    <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
-                  </div>
-                  <img src={favourite} alt='icon' className='w-7 h-7' />
+            </div>
+            <div className='flex flex-col mt-3'>
+              <div className='flex justify-between items-start gap-3'>
+                <div className='h-7 w-7 bg-grey1 rounded-md'></div>
+                <div>
+                  <h3 className='text-base text-black'>Project Plan Management for ABECE Studios</h3>
+                  <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>
                 </div>
+                <img src={favourite} alt='icon' className='w-7 h-7' />
               </div>
+            </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   );

@@ -50,11 +50,11 @@ const emails = [
 ]
 
 const categories = [
-    {name: 'Primary (27%)', number: '763'},
-    {name: 'Promotion (11%)', number: '321', color: 'text-yellow-500'},
-    {name: 'Forum (22%)', number: '69'},
-    {name: 'Socials (15%) ', number: '154'},
-    {name: 'Spam (25%) ', number: '696'},
+    {name: 'Primary (27%)', number: '763', color: 'h-3 w-3 bg-primary rounded-sm'},
+    {name: 'Promotion (11%)', number: '321', color: 'h-3 w-3 bg-accent1 rounded-sm'},
+    {name: 'Forum (22%)', number: '69', color: 'h-3 w-3 bg-accent2 rounded-sm'},
+    {name: 'Socials (15%) ', number: '154', color: 'h-3 w-3 bg-[#FFAB2D] rounded-sm'},
+    {name: 'Spam (25%) ', number: '696', color: 'h-3 w-3 bg-[#FF4A55] rounded-sm'},
 ]
 
 export { navigations, navs, contacts, emails, categories };
