@@ -115,9 +115,9 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className='flex flex-wrap gap-4 relative'>
-        {/* <div className='flex gap-4 mt-8'> */}
-          <div className='shadow-sm bg-white px-4 py-6 w-72 rounded-md basis-1/4'>
+      <div className='flex flex-row gap-4 mt-8'>
+        <div className='flex flex-col gap-4 basis-[5%] w-72'>
+          <div className='shadow-sm bg-white px-4 py-6 rounded-md w-60'>
             <div className='flex justify-between items-center'>
               <div>
                 <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Contacts</h3>
@@ -141,50 +141,7 @@ const Dashboard = () => {
               <button className='bg-primarySoft text-primary w-full font-bold py-2 shadow-sm rounded-sm'>View More</button>
             </div>
           </div>
-          <div className='shadow-sm bg-white px-4 py-6 w-full h-full rounded-md basis-[73%]'>
-              <div className='flex justify-between items-center'>
-                <div className=''>
-                  <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Recent Emails</h3>
-                  <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet</p>
-                </div>
-                <div className='flex justify-between items-center gap-8 border-b border-grey2 pb-3'>
-                  <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
-                    <MdMarkEmailUnread className='w-4 h-4' />Important
-                  </p>
-                  <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
-                    <ImUsers className='w-4 h-4' />Socials
-                  </p>
-                  <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
-                    <HiDotsCircleHorizontal className='w-4 h-4' />Promotion
-                  </p>
-                </div>
-              </div>
-              <div className='mt-8'>
-                {emails.map((email, index)=>(
-                  <div key={index} className='flex justify-between items-center'>
-                    <div className='pb-3 flex items-start justify-center gap-2'>
-                      {email.starIcon}
-                      <div className='bg-grey2 w-8 h-8 rounded-md'></div>
-                      <div className=''>
-                        <p className='text-xs text-grey1 font-cairo'>{email.mail} . {email.date}</p>
-                        <h2 className='text-sm font-semibold font-cairo pt-2 pb-3'>{email.title}</h2>
-                        <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
-                        <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
-                      </div>
-                    </div>
-                    <div className='flex items gap-4'>
-                        {email.inbox}
-                        {email.clock}
-                        {email.attach}
-                      </div>
-                  </div>
-                ))}
-              </div>
-          </div>
-        {/* </div> */}
-
-        {/* <div className='flex w-full'> */}
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72 basis-1/4'>
+          <div className='bg-white rounded-md shadow-sm px-4 py-6'>
             <h3 className='text-base font-cairo font-bold'>Most Tag Used</h3>
             <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
             <div className='mt-6 font-cairo'>
@@ -224,7 +181,51 @@ const Dashboard = () => {
               </ul>
             </div>
           </div>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-72 basis-1/4'>
+        </div>
+
+        <div className='grid grid-cols-3 w-full gap-y-4'>
+          <div className='shadow-sm bg-white px-4 py-6 w-full h-full rounded-md col-span-3'>
+            <div className='flex justify-between items-center'>
+              <div className=''>
+                <h3 className='font-extrabold text-lg text-black -tracking-tighter'>Recent Emails</h3>
+                <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet</p>
+              </div>
+              <div className='flex justify-between items-center gap-8 border-b border-grey2 pb-3'>
+                <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
+                  <MdMarkEmailUnread className='w-4 h-4' />Important
+                </p>
+                <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
+                  <ImUsers className='w-4 h-4' />Socials
+                </p>
+                <p className='text-grey1 text-xs hover:text-primary flex justify-center items-center gap-2'>
+                  <HiDotsCircleHorizontal className='w-4 h-4' />Promotion
+                </p>
+              </div>
+            </div>
+            <div className='mt-4'>
+              {emails.map((email, index)=>(
+                <div key={index} className='flex justify-between items-center'>
+                  <div className='pb-3 flex items-start justify-center gap-2'>
+                    {email.starIcon}
+                    <div className='bg-grey2 w-8 h-8 rounded-md'></div>
+                    <div className=''>
+                      <p className='text-xs text-grey1 font-cairo'>{email.mail} . {email.date}</p>
+                      <h2 className='text-sm font-semibold font-cairo pt-2 pb-3'>{email.title}</h2>
+                      <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
+                      <p className='text-xs text-grey1 font-open'>{email.subtitle2}</p>
+                    </div>
+                  </div>
+                  <div className='flex items gap-4'>
+                      {email.inbox}
+                      {email.clock}
+                      {email.attach}
+                    </div>
+                </div>
+              ))}
+            </div> 
+          </div>
+
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-52'>
             <h3 className='text-base font-cairo font-bold'>Email Categories</h3>
             <p className='text-grey1 text-xs font-open'>Lorem ipsum dolor sit amet</p>
             <div className='flex items-center justify-center'>
@@ -241,7 +242,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-4/6 basis-[46%]'>
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-full col-span-2'>
             <div className='flex justify-between items-center'>
               <div>
                 <h3 className='text-base font-cairo font-bold'>Pinned Emails</h3>
@@ -303,7 +304,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
-        {/* </div> */}
+        </div>
       </div>
     </div>
   );

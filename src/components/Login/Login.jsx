@@ -52,7 +52,7 @@ const Login = ({setToken}) => {
                 <h1 className='font-cairo text-black font-bold text-3xl mb-4'>Welcome Back!</h1>
                 <p className='text-black'>please login using your account</p>
             </div>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} data-netlify="true">
                 <label>
                     <p className='text-grey2 text-xs mb-2 uppercase'>Username</p>
                     <input 
