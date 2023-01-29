@@ -1,16 +1,16 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Settings, Dashboard, Login, Email, Kanban, Contact, Calendar, Invoices, Navbar, Comment, SideBar } from './components/index';
-import useToken from './components/useToken';
+// import useToken from './components/useToken';
 
 
 
 function App() {
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
 
-  if(!token){
-    return <Login setToken={setToken} />
-  }
+  // if(!token){
+  //   return <Login setToken={setToken} />
+  // }
 
   return (
     <div>

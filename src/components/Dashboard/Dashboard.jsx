@@ -26,15 +26,15 @@ const Dashboard = () => {
           <p className='text-grey1'>Lorem ipsum dolor sit amet</p>
         </div>
         <div className='flex justify-center gap-6 items-center'>
-          <div className='relative shadow-md flex items-center'>
-            <input 
+          <div className='relative flex items-center'>
+            <input
               placeholder='Search here'
               type='text'
               className='py-3 px-8 shadow1'
             />
             <AiOutlineSearch className='absolute left-2 text-primary'/>
           </div>
-          <div className='flex bg-white px-2 py-2 items-center shadow-md'>
+          <div className='flex bg-white px-2 py-2 items-center'>
             <BsCalendarFill className='text-primary' />
             <div className='px-2'>
               <h3 className='text-sm'>Change Period</h3>
@@ -44,38 +44,38 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-between items-center w-full mt-5'>
-        <div className='shadow-sm bg-white flex gap-5 p-7 rounded-md justify-center items-center'>
-          <img src={ringProgress} alt='ring' className='w-16 h-16' />
+      <div className='flex justify-between items-center w-full mt-5 gap-4'>
+        <div className='shadow-sm bg-white flex gap-5 w-1/4 h-[200px] rounded-md justify-center items-center'>
+          <img src={ringProgress} alt='ring' className='w-18 h-18' />
           <div>
-            <h2 className='font-extrabold text-lg text-black -tracking-tighter'>215</h2>
-            <p className='text-grey1 text-xs'>New Emails</p>
+            <h2 className='font-extrabold text-xl text-black -tracking-tighter'>215</h2>
+            <p className='text-grey1 text-sm'>New Emails</p>
           </div>
         </div>
-        <div className='shadow-sm bg-white flex gap-5 p-7 rounded-md justify-center items-center'>
-        <img src={ringProgress2} alt='ring' className='w-16 h-16' />
+        <div className='shadow-sm bg-white flex gap-5 w-1/4 h-[200px] rounded-md justify-center items-center'>
+        <img src={ringProgress2} alt='ring' className='w-18 h-18' />
           <div>
-            <h2 className='font-extrabold text-lg text-black -tracking-tighter'>84</h2>
-            <p className='text-grey1 text-xs'>Unread Emails</p>
+            <h2 className='font-extrabold text-xl text-black -tracking-tighter'>84</h2>
+            <p className='text-grey1 text-sm'>Unread Emails</p>
           </div>
         </div>
-        <div className='shadow-sm bg-white flex gap-5 p-7 rounded-md justify-center items-center'>
-        <img src={icon} alt='ring' className='w-16 h-16' />
+        <div className='shadow-sm bg-white flex gap-5 w-1/4 h-[200px] rounded-md justify-center items-center'>
+        <img src={icon} alt='ring' className='w-18 h-18' />
           <div>
-            <h2 className='font-extrabold text-lg text-black -tracking-tighter'>59</h2>
-            <p className='text-grey1 text-xs'>Important Emails</p>
+            <h2 className='font-extrabold text-xl text-black -tracking-tighter'>59</h2>
+            <p className='text-grey1 text-sm'>Important Emails</p>
           </div>
         </div>
-        <div className='shadow-sm bg-white flex gap-5 px-7 py-[18px] rounded-md justify-center items-center'>
-          <img src={barCharts} alt='ring' className='w-16 h-16' />
+        <div className='shadow-sm bg-white flex gap-5 w-1/4 h-[200px] py-[18px] rounded-md justify-center items-center'>
+          <img src={barCharts} alt='ring' className='w-18 h-18' />
           <div>
             <div>
-              <h3 className='font-extrabold text-lg text-black -tracking-tighter'>2,841</h3>
-              <p className='text-grey1 text-xs'>Promotion Emails</p>
+              <h3 className='font-extrabold text-xl text-black -tracking-tighter'>2,841</h3>
+              <p className='text-grey1 text-sm'>Promotion Emails</p>
             </div>
             <div>
-              <h3 className='font-extrabold text-lg text-black -tracking-tighter'>1,456</h3>
-              <p className='text-grey1 text-xs'>Spam Emails</p>
+              <h3 className='font-extrabold text-xl text-black -tracking-tighter'>1,456</h3>
+              <p className='text-grey1 text-sm'>Spam Emails</p>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ const Dashboard = () => {
                     </div>
                 </div>
               ))}
-            </div> 
+            </div>
           </div>
 
           <div className='bg-white rounded-md shadow-sm px-4 py-6 w-52'>
@@ -242,7 +242,7 @@ const Dashboard = () => {
               </div>
             ))}
           </div>
-          <div className='bg-white rounded-md shadow-sm px-4 py-6 w-full col-span-2'>
+          <div className='bg-white rounded-md shadow-sm px-4 py-6 col-span-2'>
             <div className='flex justify-between items-center'>
               <div>
                 <h3 className='text-base font-cairo font-bold'>Pinned Emails</h3>
@@ -254,7 +254,7 @@ const Dashboard = () => {
             </div>
             <div className='flex flex-col mt-4'>
               <div className='flex justify-between items-start gap-3'>
-                <div className='h-7 w-7 bg-grey1 rounded-md '></div>
+                <div className='h-7 w-7 bg-grey1 rounded-md'></div>
                 <div>
                   <h3 className='text-base text-black'>UI Design Submition Projects File</h3>
                   <p className='text-grey1 text-xs'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</p>

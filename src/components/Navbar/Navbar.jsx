@@ -1,7 +1,6 @@
 /* This example requires Tailwind CSS v2.0+ */
 import React from 'react'
 import { Disclosure, Menu } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import { navs } from '../../containers';
 import logo from '../../assets/logo.png';
 import unitedState from '../../assets/united-states.png';
@@ -14,28 +13,13 @@ const Navbar = () => {
     <Disclosure as="nav" className="bg-white shadow-md">
     {({ open }) => (
       <>
-        <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="max-w-full px-8 mx-auto">
           <div className="relative flex items-center justify-between h-16">
-            <div className="w-2/12 flex items-center justify-between sm:items-stretch sm:justify-between">
-              <div className="flex-shrink-0 flex items-center">
-                <img
-                  className="block h-8 w-auto"
-                  src={logo}
-                  alt="brand pic"
-                />
-              </div>
-              <div className="">
-              {/* Mobile menu button*/}
-              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-black hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                <span className="sr-only">Open main menu</span>
-                {open ? (
-                  <XIcon className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </Disclosure.Button>
-            </div>
-            </div>
+            <img
+              className="block h-8 w-auto"
+              src={logo}
+              alt="brand pic"
+            />
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className='flex justify-between items-center w-full pr-6'>
                 <div className=''>
@@ -45,7 +29,7 @@ const Navbar = () => {
                   <div className="flex space-x-2">
                     {navs.map((item) => (
                       <a key={item.name} href={item.href}>
-                        <img 
+                        <img
                           alt={item.name}
                           src={item.icon}
                           className='h-9 w-9'
