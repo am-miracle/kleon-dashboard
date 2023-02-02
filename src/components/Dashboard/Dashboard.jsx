@@ -30,7 +30,7 @@ const Dashboard = () => {
             <input
               placeholder='Search here'
               type='text'
-              className='py-3 px-8 shadow1'
+              className='py-3 px-8 shadow1 outline-none border-none'
             />
             <AiOutlineSearch className='absolute left-2 text-primary'/>
           </div>
@@ -82,7 +82,7 @@ const Dashboard = () => {
       </div>
 
       <div className='flex justify-between items-center w-full gap-5 mt-5'>
-        <div className='bg-white p-5 shadow-sm rounded-md w-full relative'>
+        <div className='bg-white h-52 p-5 shadow-sm rounded-md w-full relative'>
           <h2 className='font-extrabold text-3xl text-black -tracking-tighter'>8,642</h2>
           <h3 className='text-sm font-bold mt-2'>Total emails that you have</h3>
           <p className='text-grey1 text-xs mt-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
@@ -93,7 +93,7 @@ const Dashboard = () => {
           </div>
           <img src={bgBox} alt='bg' className='absolute top-0 right-0 w-28 h-28' />
         </div>
-        <div className='bg-white p-5 shadow-sm rounded-md w-full'>
+        <div className='bg-white h-52 p-5 shadow-sm rounded-md w-full'>
           <div className='flex items-center justify-between'>
             <div>
               <h3 className='text-sm font-bold'>Conversation Statistics</h3>
@@ -103,7 +103,7 @@ const Dashboard = () => {
               <BsSave2Fill className='text-primary h-3 w-3 mr-2' />Save report
             </button>
           </div>
-          <img src={graph} alt='graph' className='mt-4' />
+          <img src={graph} alt='graph' className='mt-4 w-full' />
           <ul className='flex items-center gap-2 justify-evenly'>
             <li className='text-xs'>Sunday</li>
             <li className='text-xs'>Monday</li>
@@ -115,7 +115,7 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className='flex flex-row gap-4 mt-8'>
+      {/* <div className='flex flex-row gap-4 mt-8'>
         <div className='flex flex-col gap-4 basis-[5%] w-72'>
           <div className='shadow-sm bg-white px-4 py-6 rounded-md w-60'>
             <div className='flex justify-between items-center'>
@@ -305,7 +305,14 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      {/* <div class="grid grid-cols-3 grid-rows-3 gap-4 w-full">
+        <div class="w-full h-20 bg-blue-900 text-white rounded-sm">01</div>
+        <div class=" col-span-2 w-full h-10 bg-blue-900 text-white rounded-sm">02</div>
+        <div class="w-full h-10 bg-blue-900 text-white rounded-sm">03</div>
+        <div class="w-full h-20 bg-blue-900 text-white rounded-sm">04</div>
+        <div class="w-full h-20 row-span-2 bg-blue-900 text-white rounded-sm">05</div>
+      </div> */}
     </div>
   );
 };
